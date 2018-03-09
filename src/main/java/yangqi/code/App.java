@@ -22,16 +22,18 @@ public class App
             @Override
             public void process(WatchedEvent event) {
                 System.out.println(event);
-
             }
 
         });
 
-        Stat e=zk.exists("/yangqi_test",null);
+//        Stat e=zk.exists("/yangqi_test",null);
+        Stat e=zk.exists("/wpp",null);
 
         System.out.println("exists "+e);
+        System.out.println("exists value:");
 
         zk.setData("/yangqi_test", "Data of node 3".getBytes(), -1);
+//        zk.create("/yangqi_test", "Data of node 3".getBytes(), -1);
     }
 
 }

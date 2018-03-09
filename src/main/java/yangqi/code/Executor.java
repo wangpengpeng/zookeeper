@@ -15,9 +15,9 @@ import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 
 /**
- * ÀàExecutor.javaµÄÊµÏÖÃèÊö£ºTODO ÀàÊµÏÖÃèÊö
+ * ï¿½ï¿½Executor.javaï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½TODO ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
- * @author yangqi 2013-5-30 ÏÂÎç10:48:09
+ * @author yangqi 2013-5-30 ï¿½ï¿½ï¿½ï¿½10:48:09
  */
 
 public class Executor implements Watcher, Runnable, DataMonitorListener {
@@ -62,8 +62,12 @@ public class Executor implements Watcher, Runnable, DataMonitorListener {
     public void process(WatchedEvent event) {
         dm.process(event);
     }
-
+    /**
+     * å¯¹ /yangqi_test è¿›è¡Œç›‘å¬ï¼Œå…¶ä»–çš„ä¸ç›‘å¬
+     *
+     */
     public void run() {
+
         try {
             synchronized (this) {
                 while (!dm.dead) {
